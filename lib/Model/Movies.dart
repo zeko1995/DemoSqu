@@ -1,3 +1,8 @@
+
+import 'dart:convert';
+
+List<Movies> MoviesFromJson(String str) =>
+    List<Movies>.from(json.decode(str).map((x) => Movies.fromJson(x)));
 class Movies {
   bool? adult;
   String? backdropPath;
